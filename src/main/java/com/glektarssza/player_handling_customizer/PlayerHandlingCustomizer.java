@@ -106,7 +106,7 @@ public final class PlayerHandlingCustomizer {
                 () -> new NullPointerException(
                     String
                         .format(
-                            "Sided proxy instance for mod with ID \"{}\" does not exist",
+                            "Sided proxy instance for mod with ID \"%s\" does not exist",
                             Tags.MOD_ID
                         )
                 )
