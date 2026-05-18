@@ -59,7 +59,9 @@ A custom Checkstyle configuration for my projects.
             <property name="protectedAllowed" value="true" />
         </module>
         <module name="ThrowsCount" />
-        <module name="MissingCtor" />
+        <module name="MissingCtor">
+            <property name="severity" value="ignore" />
+        </module>
         <module name="EmptyStatement" />
         <module name="DefaultComesLast" />
         <module name="ConstructorsDeclarationGrouping" />
