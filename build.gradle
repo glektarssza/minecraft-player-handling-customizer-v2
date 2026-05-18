@@ -23,8 +23,7 @@ base {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(8))
-        // -- Azul covers the most platforms for Java 8 toolchains, crucially including MacOS arm64
+        languageVersion.set(JavaLanguageVersion.of(25))
         vendor.set(org.gradle.jvm.toolchain.JvmVendorSpec.AZUL)
     }
     withSourcesJar()

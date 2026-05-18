@@ -202,6 +202,9 @@ A custom Checkstyle configuration for my projects.
         <module name="SuppressWithNearbyCommentFilter" />
         <module name="AvoidDoubleBraceInitialization" />
         <module name="CovariantEquals" />
+        <module name="DeclarationOrder">
+            <property name="ignoreModifiers" value="true" />
+        </module>
         <module name="EqualsAvoidNull" />
         <module name="EqualsHashCode" />
         <module name="ExplicitInitialization" />
@@ -209,9 +212,7 @@ A custom Checkstyle configuration for my projects.
         <module name="HiddenField">
             <property name="tokens" value="VARIABLE_DEF, PARAMETER_DEF, PATTERN_VARIABLE_DEF, LAMBDA, RECORD_COMPONENT_DEF" />
         </module>
-        <module name="IllegalCatch">
-            <property name="illegalClassNames" value="RuntimeException, java.lang.RuntimeException" />
-        </module>
+        <module name="IllegalCatch" />
         <module name="IllegalInstantiation" />
         <module name="IllegalSymbol" />
         <module name="IllegalThrows" />
@@ -259,4 +260,7 @@ A custom Checkstyle configuration for my projects.
     <module name="SuppressWarningsFilter" />
     <module name="SuppressWithNearbyTextFilter" />
     <module name="SuppressWithPlainTextCommentFilter" />
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="(.+(\\|/))?(build|run|bin|\.gradle)(\\|/).+" />
+    </module>
 </module>
