@@ -19,7 +19,9 @@
             "templates/vscode"
         ],
         "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
+            "source.organizeImports": "explicit",
+            "source.fixAll.shellcheck": "explicit",
+            "source.fixAll.prettier": "explicit"
         },
         "files.associations": {
             "mcmod.info": "json",
@@ -28,8 +30,10 @@
         "java.autobuild.enabled": true,
         "java.cleanup.actions": [
             "renameFileToType",
+            "organizeImports",
             "addOverride",
-            "organizeImports"
+            "addDeprecated",
+            "addFinalModifier"
         ],
         "java.codeAction.sortMembers.avoidVolatileChanges": true,
         "java.codeGeneration.addFinalForNewDeclaration": "none",
