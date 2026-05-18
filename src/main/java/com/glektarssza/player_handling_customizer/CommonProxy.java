@@ -27,7 +27,7 @@ public abstract class CommonProxy {
      *
      * @param event The event to handle.
      */
-    public void OnPreInit(FMLPreInitializationEvent event) {
+    public void OnPreInit(final FMLPreInitializationEvent event) {
         // -- IMMEDIATELY register ourselves with the main event bus!
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -37,18 +37,14 @@ public abstract class CommonProxy {
      *
      * @param event The event to handle.
      */
-    public void OnInit(FMLInitializationEvent event) {
-        // TODO: Any common main initialization logic here
-    }
+    public void OnInit(final FMLInitializationEvent event) {}
 
     /**
      * Handle the post-initialization event from the Forge mod loader.
      *
      * @param event The event to handle.
      */
-    public void OnPostInit(FMLPostInitializationEvent event) {
-        // TODO: Any common post-initialization logic here
-    }
+    public void OnPostInit(final FMLPostInitializationEvent event) {}
 
     /**
      * Handle the event indicating the server is about to start from the Forge
@@ -56,7 +52,7 @@ public abstract class CommonProxy {
      *
      * @param event The event to handle.
      */
-    public void OnServerAboutToStart(FMLServerAboutToStartEvent event) {
+    public void OnServerAboutToStart(final FMLServerAboutToStartEvent event) {
         // -- Does nothing, here for the server proxy to implement
     }
 
@@ -66,7 +62,7 @@ public abstract class CommonProxy {
      *
      * @param event The event to handle.
      */
-    public void OnServerStarting(FMLServerStartingEvent event) {
+    public void OnServerStarting(final FMLServerStartingEvent event) {
         // -- Does nothing, here for the server proxy to implement
     }
 
@@ -76,7 +72,7 @@ public abstract class CommonProxy {
      *
      * @param event The event to handle.
      */
-    public void OnServerStarted(FMLServerStartedEvent event) {
+    public void OnServerStarted(final FMLServerStartedEvent event) {
         // -- Does nothing, here for the server proxy to implement
     }
 
@@ -86,7 +82,7 @@ public abstract class CommonProxy {
      *
      * @param event The event to handle.
      */
-    public void OnServerStopping(FMLServerStoppingEvent event) {
+    public void OnServerStopping(final FMLServerStoppingEvent event) {
         // -- Does nothing, here for the server proxy to implement
     }
 
@@ -96,7 +92,7 @@ public abstract class CommonProxy {
      *
      * @param event The event to handle.
      */
-    public void OnServerStopped(FMLServerStoppedEvent event) {
+    public void OnServerStopped(final FMLServerStoppedEvent event) {
         // -- Does nothing, here for the server proxy to implement
     }
 }
