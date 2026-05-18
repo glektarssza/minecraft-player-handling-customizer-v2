@@ -12,14 +12,18 @@ import com.glektarssza.player_handling_customizer.utils.TypeUtils;
  */
 @Testable
 public final class TypeUtilsSpec {
+    /**
+     * Test the {@link TypeUtils#ensureNotNull} method passes if the input is
+     * not {@code null}.
+     */
     @Test
     public void test_ensureNotNull_passesIfNotNull() {
         // -- Given
-        Object value = new Object();
+        final Object value = new Object();
 
         // -- When
-        ThrowingCallable method = () -> {
-            Object r = TypeUtils.ensureNotNull(value);
+        final ThrowingCallable method = () -> {
+            final Object r = TypeUtils.ensureNotNull(value);
             Assertions.assertThat(r).isSameAs(value);
         };
 

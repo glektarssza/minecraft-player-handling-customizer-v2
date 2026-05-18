@@ -8,6 +8,13 @@ import com.glektarssza.player_handling_customizer.api.annotations.Nullable;
  */
 public final class TypeUtils {
     /**
+     * Create a new instance.
+     */
+    protected TypeUtils() {
+        // -- Does nothing
+    }
+
+    /**
      * Ensure that the given value is not a {@code null} value.
      *
      * @param <T> The type of the value to check.
@@ -22,8 +29,8 @@ public final class TypeUtils {
      */
     @NotNull
     public static <T> T ensureNotNull(
-        @Nullable T value,
-        @NotNull String errorMessage
+        @Nullable final T value,
+        @NotNull final String errorMessage
     ) throws NullPointerException {
         if (value == null) {
             throw new NullPointerException(errorMessage);
@@ -43,7 +50,7 @@ public final class TypeUtils {
      */
     @NotNull
     public static <T> T ensureNotNull(
-        @Nullable T value
+        @Nullable final T value
     ) throws NullPointerException {
         if (value == null) {
             throw new NullPointerException(

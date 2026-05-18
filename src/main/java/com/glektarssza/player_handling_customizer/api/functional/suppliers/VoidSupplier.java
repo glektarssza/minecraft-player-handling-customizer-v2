@@ -12,5 +12,5 @@ public interface VoidSupplier<R> {
      *
      * @return The return value.
      */
-    public R call();
+    public abstract R call();
 }

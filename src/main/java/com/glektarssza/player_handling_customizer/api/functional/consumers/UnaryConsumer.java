@@ -12,5 +12,5 @@ public interface UnaryConsumer<T1> {
      *
      * @param first The first argument.
      */
-    public void call(T1 first);
+    public abstract void call(T1 first);
 }

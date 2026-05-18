@@ -8,5 +8,5 @@ public interface VoidConsumer {
     /**
      * Call the function.
      */
-    public void call();
+    public abstract void call();
 }

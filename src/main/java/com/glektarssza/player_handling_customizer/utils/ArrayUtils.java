@@ -5,6 +5,13 @@ package com.glektarssza.player_handling_customizer.utils;
  */
 public final class ArrayUtils {
     /**
+     * Create a new instance.
+     */
+    protected ArrayUtils() {
+        // -- Does nothing
+    }
+
+    /**
      * Join the elements of an array together into a string, connected by the
      * given joiner string.
      *
@@ -14,8 +21,8 @@ public final class ArrayUtils {
      *
      * @return The joined array elements, as a string.
      */
-    public static <T> String join(T[] array, String joiner) {
-        StringBuilder sb = new StringBuilder();
+    public static <T> String join(final T[] array, final String joiner) {
+        final StringBuilder sb = new StringBuilder();
         int i = -1;
         if (++i < array.length) {
             sb.append(array[i].toString());

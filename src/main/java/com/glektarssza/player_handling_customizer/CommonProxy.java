@@ -16,13 +16,6 @@ import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
  */
 public abstract class CommonProxy {
     /**
-     * Create a new instance.
-     */
-    protected CommonProxy() {
-        // -- Does nothing
-    }
-
-    /**
      * Handle the pre-initialization event from the Forge mod loader.
      *
      * @param event The event to handle.

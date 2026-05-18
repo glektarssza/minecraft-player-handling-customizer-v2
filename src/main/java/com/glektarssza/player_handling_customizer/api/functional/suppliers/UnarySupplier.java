@@ -15,5 +15,5 @@ public interface UnarySupplier<T1, R> {
      *
      * @return The return value.
      */
-    public R call(T1 first);
+    public abstract R call(T1 first);
 }

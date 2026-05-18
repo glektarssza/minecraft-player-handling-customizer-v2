@@ -62,6 +62,13 @@ public final class PlayerHandlingCustomizer {
     private static CommonProxy sidedProxy;
 
     /**
+     * Create a new instance.
+     */
+    private PlayerHandlingCustomizer() {
+        // -- Does nothing
+    }
+
+    /**
      * Try to get the {@link Logger} instance for the mod.
      *
      * @return An {@link Optional} which may hold the {@link Logger} instance
@@ -120,13 +127,6 @@ public final class PlayerHandlingCustomizer {
     }
 
     /**
-     * Create a new instance.
-     */
-    private PlayerHandlingCustomizer() {
-        // -- Does nothing
-    }
-
-    /**
      * Handle the pre-initialization event from the Forge mod loader.
      *
      * @param event The event to handle.
@@ -146,7 +146,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnPreInit(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during pre-initialization logic for mod ID \"{}\"",
@@ -183,7 +183,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnInit(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during main initialization logic for mod ID \"{}\"",
@@ -220,7 +220,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnPostInit(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during post-initialization logic for mod ID \"{}\"",
@@ -258,7 +258,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerAboutToStart(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server about to start\" logic for mod ID \"{}\"",
@@ -296,7 +296,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStarting(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server starting\" logic for mod ID \"{}\"",
@@ -334,7 +334,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStarted(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server started\" logic for mod ID \"{}\"",
@@ -372,7 +372,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStopping(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server stopping\" logic for mod ID \"{}\"",
@@ -410,7 +410,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStopped(event);
-        } catch (Throwable ex) {
+        } catch (final Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server stopped\" logic for mod ID \"{}\"",

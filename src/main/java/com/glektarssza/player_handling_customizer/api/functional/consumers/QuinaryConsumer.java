@@ -20,5 +20,11 @@ public interface QuinaryConsumer<T1, T2, T3, T4, T5> {
      * @param fourth The fourth argument.
      * @param fifth The fifth argument.
      */
-    public void call(T1 first, T2 second, T3 third, T4 fourth, T5 fifth);
+    public abstract void call(
+        T1 first,
+        T2 second,
+        T3 third,
+        T4 fourth,
+        T5 fifth
+    );
 }

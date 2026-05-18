@@ -19,5 +19,5 @@ public interface TrinarySupplier<T1, T2, T3, R> {
      *
      * @return The return value.
      */
-    public R call(T1 first, T2 second, T3 third);
+    public abstract R call(T1 first, T2 second, T3 third);
 }

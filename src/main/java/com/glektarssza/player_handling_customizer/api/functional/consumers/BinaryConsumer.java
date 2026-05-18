@@ -14,5 +14,5 @@ public interface BinaryConsumer<T1, T2> {
      * @param first The first argument.
      * @param second The second argument.
      */
-    public void call(T1 first, T2 second);
+    public abstract void call(T1 first, T2 second);
 }

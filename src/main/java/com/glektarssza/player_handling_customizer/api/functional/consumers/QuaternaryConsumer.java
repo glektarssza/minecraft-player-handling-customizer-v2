@@ -18,5 +18,5 @@ public interface QuaternaryConsumer<T1, T2, T3, T4> {
      * @param third The third argument.
      * @param fourth The fourth argument.
      */
-    public void call(T1 first, T2 second, T3 third, T4 fourth);
+    public abstract void call(T1 first, T2 second, T3 third, T4 fourth);
 }

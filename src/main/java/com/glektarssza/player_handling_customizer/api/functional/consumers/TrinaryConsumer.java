@@ -16,5 +16,5 @@ public interface TrinaryConsumer<T1, T2, T3> {
      * @param second The second argument.
      * @param third The third argument.
      */
-    public void call(T1 first, T2 second, T3 third);
+    public abstract void call(T1 first, T2 second, T3 third);
 }
