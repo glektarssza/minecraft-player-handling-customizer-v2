@@ -221,7 +221,9 @@ A custom Checkstyle configuration for my projects.
         <module name="HiddenField">
             <property name="tokens" value="VARIABLE_DEF, PARAMETER_DEF, PATTERN_VARIABLE_DEF, LAMBDA, RECORD_COMPONENT_DEF" />
         </module>
-        <module name="IllegalCatch" />
+        <module name="IllegalCatch">
+            <property name="illegalClassNames" value="RuntimeException, java.lang.RuntimeException" />
+        </module>
         <module name="IllegalInstantiation" />
         <module name="IllegalSymbol" />
         <module name="IllegalThrows" />
