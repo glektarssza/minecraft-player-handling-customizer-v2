@@ -33,6 +33,7 @@
         "./gradlew",
         "./gradlew.bat",
         "./formatting_rules.xml",
+        "./checkstyle.xml",
         "**/gradle-wrapper.properties"
     ],
     "loadDefaultConfiguration": true,
