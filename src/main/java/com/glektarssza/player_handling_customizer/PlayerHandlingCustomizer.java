@@ -17,6 +17,9 @@ import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
 
 import com.glektarssza.player_handling_customizer.api.annotations.Nullable;
 
+/**
+ * The root mod object.
+ */
 @Mod(
     modid = Tags.MOD_ID,
     name = Tags.MOD_NAME,
@@ -40,20 +43,23 @@ public final class PlayerHandlingCustomizer {
      */
     @Mod.Instance
     @Nullable
-    private static PlayerHandlingCustomizer instance = null;
+    private static PlayerHandlingCustomizer instance;
 
     /**
      * The logger instance for the mod.
      */
     @Nullable
-    private static Logger logger = null;
+    private static Logger logger;
 
+    /**
+     * The client/server proxy object.
+     */
     @SidedProxy(
         clientSide = Tags.MOD_SIDED_PROXY_CLIENT_SIDE,
         serverSide = Tags.MOD_SIDED_PROXY_SERVER_SIDE
     )
     @Nullable
-    private static CommonProxy sidedProxy = null;
+    private static CommonProxy sidedProxy;
 
     /**
      * Try to get the {@link Logger} instance for the mod.
@@ -114,6 +120,13 @@ public final class PlayerHandlingCustomizer {
     }
 
     /**
+     * Create a new instance.
+     */
+    private PlayerHandlingCustomizer() {
+        // -- Does nothing
+    }
+
+    /**
      * Handle the pre-initialization event from the Forge mod loader.
      *
      * @param event The event to handle.
@@ -123,8 +136,8 @@ public final class PlayerHandlingCustomizer {
      */
     @Mod.EventHandler
     public void OnPreInit(
-        FMLPreInitializationEvent event
-    ) throws RuntimeException {
+        final FMLPreInitializationEvent event
+    ) {
         logger = event.getModLog();
         getLogger()
             .info(
@@ -133,7 +146,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnPreInit(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during pre-initialization logic for mod ID \"{}\"",
@@ -162,7 +175,7 @@ public final class PlayerHandlingCustomizer {
      * @param event The event to handle.
      */
     @Mod.EventHandler
-    public void OnInit(FMLInitializationEvent event) {
+    public void OnInit(final FMLInitializationEvent event) {
         getLogger()
             .info(
                 "Performing main initialization logic for mod ID \"{}\"...",
@@ -170,7 +183,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnInit(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during main initialization logic for mod ID \"{}\"",
@@ -199,7 +212,7 @@ public final class PlayerHandlingCustomizer {
      * @param event The event to handle.
      */
     @Mod.EventHandler
-    public void OnPostInit(FMLPostInitializationEvent event) {
+    public void OnPostInit(final FMLPostInitializationEvent event) {
         getLogger()
             .info(
                 "Performing post-initialization logic for mod ID \"{}\"...",
@@ -207,7 +220,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnPostInit(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during post-initialization logic for mod ID \"{}\"",
@@ -237,7 +250,7 @@ public final class PlayerHandlingCustomizer {
      * @param event The event to handle.
      */
     @Mod.EventHandler
-    public void OnServerAboutToStart(FMLServerAboutToStartEvent event) {
+    public void OnServerAboutToStart(final FMLServerAboutToStartEvent event) {
         getLogger()
             .info(
                 "Performing \"server about to start\" logic for mod ID \"{}\"...",
@@ -245,7 +258,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerAboutToStart(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server about to start\" logic for mod ID \"{}\"",
@@ -263,7 +276,7 @@ public final class PlayerHandlingCustomizer {
         }
         getLogger()
             .info(
-                "Post-initialization logic for mod ID \"{}\" completed normally",
+                "Server about to start logic for mod ID \"{}\" completed normally",
                 Tags.MOD_ID
             );
     }
@@ -275,7 +288,7 @@ public final class PlayerHandlingCustomizer {
      * @param event The event to handle.
      */
     @Mod.EventHandler
-    public void OnServerStarting(FMLServerStartingEvent event) {
+    public void OnServerStarting(final FMLServerStartingEvent event) {
         getLogger()
             .info(
                 "Performing \"server starting\" logic for mod ID \"{}\"...",
@@ -283,7 +296,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStarting(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server starting\" logic for mod ID \"{}\"",
@@ -313,7 +326,7 @@ public final class PlayerHandlingCustomizer {
      * @param event The event to handle.
      */
     @Mod.EventHandler
-    public void OnServerStarted(FMLServerStartedEvent event) {
+    public void OnServerStarted(final FMLServerStartedEvent event) {
         getLogger()
             .info(
                 "Performing \"server started\" logic for mod ID \"{}\"...",
@@ -321,7 +334,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStarted(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server started\" logic for mod ID \"{}\"",
@@ -351,7 +364,7 @@ public final class PlayerHandlingCustomizer {
      * @param event The event to handle.
      */
     @Mod.EventHandler
-    public void OnServerStopping(FMLServerStoppingEvent event) {
+    public void OnServerStopping(final FMLServerStoppingEvent event) {
         getLogger()
             .info(
                 "Performing \"server stopping\" logic for mod ID \"{}\"...",
@@ -359,7 +372,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStopping(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server stopping\" logic for mod ID \"{}\"",
@@ -389,7 +402,7 @@ public final class PlayerHandlingCustomizer {
      * @param event The event to handle.
      */
     @Mod.EventHandler
-    public void OnServerStopped(FMLServerStoppedEvent event) {
+    public void OnServerStopped(final FMLServerStoppedEvent event) {
         getLogger()
             .info(
                 "Performing \"server stopped\" logic for mod ID \"{}\"...",
@@ -397,7 +410,7 @@ public final class PlayerHandlingCustomizer {
             );
         try {
             getSidedProxy().OnServerStopped(event);
-        } catch (Exception ex) {
+        } catch (Throwable ex) {
             getLogger()
                 .fatal(
                     "Fatal error during \"server stopped\" logic for mod ID \"{}\"",
