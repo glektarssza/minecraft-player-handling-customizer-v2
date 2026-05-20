@@ -29,3 +29,9 @@ checkstyle {
     maxWarnings = 0
     configFile = file("${rootProject.projectDir}/checkstyle.xml")
 }
+
+tasks.withType(Checkstyle).configureEach {
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}

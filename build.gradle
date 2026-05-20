@@ -23,8 +23,8 @@ base {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(25))
-        vendor.set(org.gradle.jvm.toolchain.JvmVendorSpec.AZUL)
+        languageVersion = JavaLanguageVersion.of(8)
+        vendor = org.gradle.jvm.toolchain.JvmVendorSpec.ADOPTIUM
     }
     withSourcesJar()
     withJavadocJar()
