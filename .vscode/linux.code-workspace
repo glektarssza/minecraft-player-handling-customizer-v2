@@ -7,7 +7,38 @@
     ],
     "settings": {
         "[java]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "redhat.java"
+        },
+        "[github-actions-workflow]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file",
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.indentSize": "tabSize",
+            "editor.tabSize": 2
+        },
+        "[json]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file",
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[jsonc]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file",
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[jsonl]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file",
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[yaml]": {
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "file",
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.indentSize": "tabSize",
+            "editor.tabSize": 2
         },
         "cSpell.ignorePaths": [
             "vscode-extension",
@@ -166,6 +197,8 @@
         "java.silentNotification": true,
         "java.sources.organizeImports.starThreshold": 9999,
         "java.sources.organizeImports.staticStarThreshold": 9999,
-        "java.symbols.includeSourceMethodDeclarations": true
+        "java.symbols.includeSourceMethodDeclarations": true,
+        "prettier.configPath": ".prettierrc.mjs",
+        "prettier.ignorePath": ".prettierignore"
     }
 }
