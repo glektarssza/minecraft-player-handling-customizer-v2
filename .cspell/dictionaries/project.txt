@@ -25,6 +25,7 @@ dragonwell
 dsun
 ensurepath
 envrc
+esbenp
 factorypath
 foojay
 forgejo
