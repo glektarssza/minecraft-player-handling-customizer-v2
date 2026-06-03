@@ -10,8 +10,15 @@ export default {
     jsxSingleQuote: true,
     overrides: [
         {
-            files: ['*.{yml,yaml}'],
+            files: ['**/*.{yml,yaml}'],
             options: {
+                tabWidth: 2
+            }
+        },
+        {
+            files: ['.github/workflows/**/*.{yml,yaml}'],
+            options: {
+                printWidth: 120,
                 tabWidth: 2
             }
         }
