@@ -31,7 +31,8 @@ public final class TypeUtils {
     public static <T> T ensureNotNull(
         @Nullable final T value,
         @NotNull final String errorMessage
-    ) throws NullPointerException {
+    )
+        throws NullPointerException {
         if (value == null) {
             throw new NullPointerException(errorMessage);
         }
@@ -49,9 +50,8 @@ public final class TypeUtils {
      * @throws NullPointerException Thrown if the {@code value} is {@code null}.
      */
     @NotNull
-    public static <T> T ensureNotNull(
-        @Nullable final T value
-    ) throws NullPointerException {
+    public static <T> T ensureNotNull(@Nullable final T value)
+        throws NullPointerException {
         if (value == null) {
             throw new NullPointerException(
                 "Expected value to be not null but got a null value"

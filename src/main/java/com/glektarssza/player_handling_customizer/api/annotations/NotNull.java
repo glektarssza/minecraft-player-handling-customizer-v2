@@ -12,6 +12,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.SOURCE)
 @Target({
     ElementType.TYPE,
+    ElementType.TYPE_PARAMETER,
     ElementType.FIELD,
     ElementType.METHOD,
     ElementType.PARAMETER,

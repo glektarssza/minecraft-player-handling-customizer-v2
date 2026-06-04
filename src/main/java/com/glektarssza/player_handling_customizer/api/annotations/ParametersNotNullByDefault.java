@@ -11,8 +11,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target({
-    ElementType.PACKAGE,
-    ElementType.TYPE
+    ElementType.PACKAGE, ElementType.TYPE
 })
 public @interface ParametersNotNullByDefault {
 

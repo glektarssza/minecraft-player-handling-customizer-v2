@@ -31,10 +31,7 @@ public final class ArrayUtilsSpec {
                         .getProperties()
                         .getProperty(
                             "FAKER_SEED",
-                            Long
-                                .toString(
-                                    System.currentTimeMillis()
-                                )
+                            Long.toString(System.currentTimeMillis())
                         )
                 )
         )

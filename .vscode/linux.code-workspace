@@ -153,7 +153,7 @@
         "java.format.comments.enabled": true,
         "java.format.enabled": true,
         "java.format.onType.enabled": false,
-        "java.format.settings.profile": "Spotless",
+        "java.format.settings.profile": "Formatting Rules",
         "java.format.settings.url": "./formatting_rules.xml",
         "java.gradle.buildServer.enabled": "on",
         "java.gradle.buildServer.openBuildOutput": "openOnBuildFailure",
