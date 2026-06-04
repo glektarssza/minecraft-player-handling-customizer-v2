@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
  * An annotation that declares a class, field, method return value, method
  * parameter, or local variable as not able to hold a {@code null} value.
  */
-@Retention(RetentionPolicy.SOURCE)
-@Target({
+@Retention(RetentionPolicy.SOURCE) @Target({
     ElementType.TYPE,
+    ElementType.TYPE_PARAMETER,
     ElementType.FIELD,
     ElementType.METHOD,
     ElementType.PARAMETER,
