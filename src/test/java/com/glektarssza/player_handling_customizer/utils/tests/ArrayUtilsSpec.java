@@ -31,10 +31,7 @@ public final class ArrayUtilsSpec {
                         .getProperties()
                         .getProperty(
                             "FAKER_SEED",
-                            Long
-                                .toString(
-                                    System.currentTimeMillis()
-                                )
+                            Long.toString(System.currentTimeMillis())
                         )
                 )
         )
@@ -81,8 +78,7 @@ public final class ArrayUtilsSpec {
      *
      * @param wordList The input word list.
      */
-    @ParameterizedTest
-    @MethodSource("generateRandomWordLists")
+    @ParameterizedTest @MethodSource("generateRandomWordLists")
     public void test_join_generatesCorrectOutput(final String[] wordList) {
         // -- Given
         final StringBuilder sb = new StringBuilder();

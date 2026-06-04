@@ -28,8 +28,6 @@ public final class TypeUtilsSpec {
         };
 
         // -- Then
-        Assertions
-            .assertThatNoException()
-            .isThrownBy(method);
+        Assertions.assertThatNoException().isThrownBy(method);
     }
 }
