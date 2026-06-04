@@ -9,9 +9,9 @@ import java.lang.annotation.Target;
  * An annotation that declares a package or class as having all parameters
  * within its scope being annotated with the {@link NotNull} annotation.
  */
-@Retention(RetentionPolicy.SOURCE) @Target({
-    ElementType.PACKAGE,
-    ElementType.TYPE
+@Retention(RetentionPolicy.SOURCE)
+@Target({
+    ElementType.PACKAGE, ElementType.TYPE
 })
 public @interface ParametersNotNullByDefault {
 

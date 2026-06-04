@@ -41,7 +41,8 @@ public final class PlayerHandlingCustomizer {
     /**
      * The mod instance.
      */
-    @Mod.Instance @Nullable
+    @Mod.Instance
+    @Nullable
     private static PlayerHandlingCustomizer instance;
 
     /**
@@ -56,7 +57,8 @@ public final class PlayerHandlingCustomizer {
     @SidedProxy(
         clientSide = Tags.MOD_SIDED_PROXY_CLIENT_SIDE,
         serverSide = Tags.MOD_SIDED_PROXY_SERVER_SIDE
-    ) @Nullable
+    )
+    @Nullable
     private static CommonProxy sidedProxy;
 
     /**
