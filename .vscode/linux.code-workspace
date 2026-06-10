@@ -59,6 +59,8 @@
             "pack.mcmeta": "json"
         },
         "java.autobuild.enabled": true,
+        "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
+        "java.checkstyle.version": "13.5.0",
         "java.cleanup.actions": [
             "renameFileToType",
             "organizeImports",
