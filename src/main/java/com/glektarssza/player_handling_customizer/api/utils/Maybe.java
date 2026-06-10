@@ -11,7 +11,7 @@ import com.glektarssza.player_handling_customizer.api.functional.suppliers.VoidS
  *
  * @param <T> The type of value that may be held in instances of this class.
  */
-public class Maybe<T> implements ICopyable<Maybe<T>> {
+public final class Maybe<T> implements ICopyable<Maybe<T>> {
     /**
      * Create a new instance from the given, possibly {@code null}, value.
      *
