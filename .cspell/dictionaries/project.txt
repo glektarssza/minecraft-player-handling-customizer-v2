@@ -71,6 +71,7 @@ openj
 overmind
 pacman
 pipx
+prefs
 refmap
 remotehub
 reobf
