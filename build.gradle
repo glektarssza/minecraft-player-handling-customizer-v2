@@ -6,11 +6,25 @@ plugins {
     id('com.diffplug.spotless') version '8.6.0' apply false
 }
 
-def getPropertyOrDefault(key, defaultValue) {
+project.ext.setProperty = { File file, String key, String value ->
+    def s = file.text.replaceAll("(?ms)(^\\Q${key}\\E\\s*=).*?\$", '')
+    s = s.replaceAll('\n{2,}', '\n')
+    file.text = s + key + '=' + value + '\n'
+}
+
+project.ext.setEclipsePreference = { File prefsFile, String key, String value ->
+    if (!prefsFile.exists()) {
+        prefsFile.parentFile.mkdirs()
+        prefsFile.write("eclipse.preferences.version=1\n")
+    }
+    setProperty(prefsFile, key, value)
+}
+
+project.ext.getPropertyOrDefault = { String key, String defaultValue ->
     return providers.gradleProperty(key).getOrElse(defaultValue)
 }
 
-def getProperty(key) {
+project.ext.getProperty = { String key ->
     return providers.gradleProperty(key).get()
 }
 
@@ -31,7 +45,7 @@ java {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
+    options.encoding = getPropertyOrDefault('java.compiler.file.encoding', 'UTF-8')
 }
 
 configurations {
