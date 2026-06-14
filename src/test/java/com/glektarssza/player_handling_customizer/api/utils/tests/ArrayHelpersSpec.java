@@ -1,4 +1,4 @@
-package com.glektarssza.player_handling_customizer.utils.tests;
+package com.glektarssza.player_handling_customizer.api.utils.tests;
 
 import java.util.Locale;
 import java.util.Random;
@@ -18,7 +18,7 @@ import com.glektarssza.player_handling_customizer.utils.ArrayUtils;
  * Unit tests for the {@link ArrayUtils} class.
  */
 @Testable
-public final class ArrayUtilsSpec {
+public final class ArrayHelpersSpec {
     /**
      * The {@link Faker} instance for this unit test suite.
      */

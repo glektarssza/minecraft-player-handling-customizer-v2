@@ -215,10 +215,11 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
             return obj == null;
         }
         if (obj instanceof Maybe<?>) {
-            if (((Maybe<?>)obj).value == null) {
+            final Object otherValue = ((Maybe<?>)obj).value;
+            if (otherValue == null) {
                 return false;
             }
-            return ((Maybe<?>)obj).value.equals(this.value);
+            return otherValue.equals(this.value);
         }
         return false;
     }
@@ -228,6 +229,6 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      */
     @Override
     public int hashCode() {
-        return this.value.hashCode();
+        return this.value == null ? 0 : this.value.hashCode();
     }
 }
