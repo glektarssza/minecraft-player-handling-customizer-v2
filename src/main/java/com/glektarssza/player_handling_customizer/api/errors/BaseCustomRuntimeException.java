@@ -6,7 +6,7 @@ import com.glektarssza.player_handling_customizer.api.annotations.Nullable;
  * A base custom runtime exception for other custom runtime exceptions to extend
  * from.
  */
-public abstract class BaseCustomRuntimeException extends Exception {
+public abstract class BaseCustomRuntimeException extends RuntimeException {
     // #region Constructors
 
     /**
@@ -30,7 +30,7 @@ public abstract class BaseCustomRuntimeException extends Exception {
      * new instance to be created.
      *
      * @param cause The {@link Throwable} that triggered the new instance to be
-     *        created.
+     *              created.
      */
     protected BaseCustomRuntimeException(@Nullable final Throwable cause) {
         super(cause);
@@ -41,13 +41,12 @@ public abstract class BaseCustomRuntimeException extends Exception {
      * and {@link Throwable} that caused the new instance to be created.
      *
      * @param message The message describing what went wrong.
-     * @param cause The {@link Throwable} that triggered the new instance to be
-     *        created.
+     * @param cause   The {@link Throwable} that triggered the new instance to be
+     *                created.
      */
     protected BaseCustomRuntimeException(
-        @Nullable final String message,
-        @Nullable final Throwable cause
-    ) {
+            @Nullable final String message,
+            @Nullable final Throwable cause) {
         super(message, cause);
     }
 
