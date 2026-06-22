@@ -155,6 +155,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * Get the given {@link Maybe} value if this instance has no value, an
      * instance has no value otherwise.
      *
+     * @param <U> The type of the value contained in the returned {@link Maybe}.
      * @param other The {@link Maybe} value to return if this instance holds no
      *        value.
      *
