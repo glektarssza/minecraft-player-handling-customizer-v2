@@ -7,6 +7,11 @@
     ],
     "settings": {
         "[java]": {
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": "explicit",
+                "source.fixAll.shellcheck": "explicit",
+                "source.fixAll.prettier": "explicit"
+            },
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "redhat.java"
@@ -49,18 +54,13 @@
             "build",
             "templates/vscode"
         ],
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit",
-            "source.fixAll.shellcheck": "explicit",
-            "source.fixAll.prettier": "explicit"
-        },
         "files.associations": {
             "mcmod.info": "json",
             "pack.mcmeta": "json"
         },
         "java.autobuild.enabled": true,
         "java.checkstyle.configuration": "${workspaceFolder}/checkstyle.xml",
-        "java.checkstyle.version": "13.5.0",
+        "java.checkstyle.version": "13.6.0",
         "java.cleanup.actions": [
             "renameFileToType",
             "organizeImports",
