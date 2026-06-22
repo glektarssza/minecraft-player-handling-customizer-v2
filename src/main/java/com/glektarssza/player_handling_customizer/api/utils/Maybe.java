@@ -30,7 +30,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * Create a new instance from the given value.
      *
      * @param <T> The type of value that may be held in the new instances.
-     * @param maybeValue The value which will be held in the new instance.
+     * @param value The value which will be held in the new instance.
      *
      * @return The new instance.
      */
