@@ -73,7 +73,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return {@code true} if this instance holds a value, {@code false}
      *         otherwise.
      */
-    public boolean hasValue() {
+    public boolean isSome() {
         return this.value != null;
     }
 
@@ -83,8 +83,8 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return {@code true} if this instance holds no value, {@code false}
      *         otherwise.
      */
-    public boolean hasNoValue() {
-        return !this.hasValue();
+    public boolean isNone() {
+        return !this.isSome();
     }
 
     /**
@@ -125,7 +125,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The given {@link Maybe} value if this instance has a value, a
      *         copy of this instance otherwise.
      */
-    public Maybe<T> getIfHasValue(@NotNull final Maybe<T> other) {
+    public Maybe<T> andThen(@NotNull final Maybe<T> other) {
         if (this.value != null) {
             return other;
         }
@@ -142,7 +142,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The result of calling the given {@link UnarySupplier} if this
      *         instance has a value, a copy of this instance otherwise.
      */
-    public Maybe<T> getIfHasValueThen(
+    public Maybe<T> andThen(
         @NotNull final UnarySupplier<T, Maybe<T>> otherFunc
     ) {
         if (this.value != null) {
@@ -161,7 +161,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The given {@link Maybe} value if this instance holds no value, an
      *         instance has no value otherwise.
      */
-    public <U> Maybe<U> getIfHasNoValue(@NotNull final Maybe<U> other) {
+    public <U> Maybe<U> orElse(@NotNull final Maybe<U> other) {
         if (this.value == null) {
             return other;
         }
@@ -178,7 +178,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The result of calling the given {@link UnarySupplier} if this
      *         instance has no value, an instance holding no value otherwise.
      */
-    public <U> Maybe<U> getIfHasNoValueThen(
+    public <U> Maybe<U> orElse(
         @NotNull final VoidSupplier<Maybe<U>> otherFunc
     ) {
         if (this.value == null) {
