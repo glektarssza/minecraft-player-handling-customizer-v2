@@ -13,53 +13,53 @@ public class ArgumentNilException extends InvalidArgumentException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      */
-    public ArgumentNilException(@NotNull final String argumentName) {
-        super(argumentName);
+    public ArgumentNilException(@NotNull final String argName) {
+        super(argName);
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      * @param message The message describing what went wrong.
      */
     public ArgumentNilException(
-        @NotNull final String argumentName,
+        @NotNull final String argName,
         @Nullable final String message
     ) {
-        super(argumentName, message);
+        super(argName, message);
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentNilException(
-        @NotNull final String argumentName,
+        @NotNull final String argName,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, cause);
+        super(argName, cause);
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      * @param message The message describing what went wrong.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentNilException(
-        @NotNull final String argumentName,
+        @NotNull final String argName,
         @Nullable final String message,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, message, cause);
+        super(argName, message, cause);
     }
 
     // #endregion Constructors
