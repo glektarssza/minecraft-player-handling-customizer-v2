@@ -13,7 +13,7 @@ public final class TypeHelpers {
     /**
      * Cast a value to a non-nullable value.
      *
-     * @param <T>   The type of the value to cast.
+     * @param <T> The type of the value to cast.
      * @param value The value to cast.
      *
      * @return The value, cast as a non-nullable value.
@@ -24,8 +24,9 @@ public final class TypeHelpers {
     public static <T> T castToNotNull(@Nullable final T value) {
         if (value == null) {
             throw new ArgumentNilException(
-                    "value",
-                    "Expected a non-nil input for argument \"value\" but got \"null\"");
+                "value",
+                "Expected a non-nil input for argument \"value\" but got \"null\""
+            );
         }
         return value;
     }
