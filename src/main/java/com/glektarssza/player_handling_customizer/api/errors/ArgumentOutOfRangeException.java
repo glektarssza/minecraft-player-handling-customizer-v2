@@ -35,10 +35,10 @@ public class ArgumentOutOfRangeException extends InvalidArgumentException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      */
-    public ArgumentOutOfRangeException(@NotNull final String argumentName) {
-        super(argumentName);
+    public ArgumentOutOfRangeException(@NotNull final String argName) {
+        super(argName);
         this.value = null;
         this.minValue = null;
         this.maxValue = null;
@@ -47,15 +47,15 @@ public class ArgumentOutOfRangeException extends InvalidArgumentException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value
+        @NotNull final String argName,
+        @NotNull final Object argValue
     ) {
-        super(argumentName);
-        this.value = value;
+        super(argName);
+        this.value = argValue;
         this.minValue = null;
         this.maxValue = null;
     }
@@ -63,17 +63,17 @@ public class ArgumentOutOfRangeException extends InvalidArgumentException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
      * @param message The message describing what went wrong.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
         @Nullable final String message
     ) {
-        super(argumentName, message);
-        this.value = value;
+        super(argName, message);
+        this.value = argValue;
         this.minValue = null;
         this.maxValue = null;
     }
@@ -81,18 +81,18 @@ public class ArgumentOutOfRangeException extends InvalidArgumentException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, cause);
-        this.value = value;
+        super(argName, cause);
+        this.value = argValue;
         this.minValue = null;
         this.maxValue = null;
     }
@@ -100,20 +100,20 @@ public class ArgumentOutOfRangeException extends InvalidArgumentException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
      * @param message The message describing what went wrong.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
         @Nullable final String message,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, message, cause);
-        this.value = value;
+        super(argName, message, cause);
+        this.value = argValue;
         this.minValue = null;
         this.maxValue = null;
     }
@@ -121,185 +121,185 @@ public class ArgumentOutOfRangeException extends InvalidArgumentException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue
     ) {
-        super(argumentName);
-        this.value = value;
-        this.minValue = minValue;
+        super(argName);
+        this.value = argValue;
+        this.minValue = argMinValue;
         this.maxValue = null;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
      * @param message The message describing what went wrong.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue,
         @Nullable final String message
     ) {
-        super(argumentName, message);
-        this.value = value;
-        this.minValue = minValue;
+        super(argName, message);
+        this.value = argValue;
+        this.minValue = argMinValue;
         this.maxValue = null;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, cause);
-        this.value = value;
-        this.minValue = minValue;
+        super(argName, cause);
+        this.value = argValue;
+        this.minValue = argMinValue;
         this.maxValue = null;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
      * @param message The message describing what went wrong.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue,
         @Nullable final String message,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, message, cause);
-        this.value = value;
-        this.minValue = minValue;
+        super(argName, message, cause);
+        this.value = argValue;
+        this.minValue = argMinValue;
         this.maxValue = null;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
-     * @param maxValue The maximum allowed value of the argument which was
+     * @param argMaxValue The maximum allowed value of the argument which was
      *        invalid.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue,
-        @NotNull final Object maxValue
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue,
+        @NotNull final Object argMaxValue
     ) {
-        super(argumentName);
-        this.value = value;
-        this.minValue = minValue;
-        this.maxValue = maxValue;
+        super(argName);
+        this.value = argValue;
+        this.minValue = argMinValue;
+        this.maxValue = argMaxValue;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
-     * @param maxValue The maximum allowed value of the argument which was
+     * @param argMaxValue The maximum allowed value of the argument which was
      *        invalid.
      * @param message The message describing what went wrong.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue,
-        @NotNull final Object maxValue,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue,
+        @NotNull final Object argMaxValue,
         @Nullable final String message
     ) {
-        super(argumentName, message);
-        this.value = value;
-        this.minValue = minValue;
-        this.maxValue = maxValue;
+        super(argName, message);
+        this.value = argValue;
+        this.minValue = argMinValue;
+        this.maxValue = argMaxValue;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
-     * @param maxValue The maximum allowed value of the argument which was
+     * @param argMaxValue The maximum allowed value of the argument which was
      *        invalid.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue,
-        @NotNull final Object maxValue,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue,
+        @NotNull final Object argMaxValue,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, cause);
-        this.value = value;
-        this.minValue = minValue;
-        this.maxValue = maxValue;
+        super(argName, cause);
+        this.value = argValue;
+        this.minValue = argMinValue;
+        this.maxValue = argMaxValue;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
-     * @param value The value of the argument which was invalid.
-     * @param minValue The minimum allowed value of the argument which was
+     * @param argName The name of the argument which was invalid.
+     * @param argValue The value of the argument which was invalid.
+     * @param argMinValue The minimum allowed value of the argument which was
      *        invalid.
-     * @param maxValue The maximum allowed value of the argument which was
+     * @param argMaxValue The maximum allowed value of the argument which was
      *        invalid.
      * @param message The message describing what went wrong.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public ArgumentOutOfRangeException(
-        @NotNull final String argumentName,
-        @NotNull final Object value,
-        @NotNull final Object minValue,
-        @NotNull final Object maxValue,
+        @NotNull final String argName,
+        @NotNull final Object argValue,
+        @NotNull final Object argMinValue,
+        @NotNull final Object argMaxValue,
         @Nullable final String message,
         @Nullable final Throwable cause
     ) {
-        super(argumentName, message, cause);
-        this.value = value;
-        this.minValue = minValue;
-        this.maxValue = maxValue;
+        super(argName, message, cause);
+        this.value = argValue;
+        this.minValue = argMinValue;
+        this.maxValue = argMaxValue;
     }
 
     // #endregion Constructors
