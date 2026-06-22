@@ -25,54 +25,53 @@ public class InvalidArgumentException extends BaseCustomRuntimeException {
      * @param argName The name of the argument which was invalid.
      */
     public InvalidArgumentException(@NotNull final String argName) {
-        super();
         this.argumentName = argName;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      * @param message The message describing what went wrong.
      */
     public InvalidArgumentException(
-        @NotNull final String argumentName,
+        @NotNull final String argName,
         @Nullable final String message
     ) {
         super(message);
-        this.argumentName = argumentName;
+        this.argumentName = argName;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public InvalidArgumentException(
-        @NotNull final String argumentName,
+        @NotNull final String argName,
         @Nullable final Throwable cause
     ) {
         super(cause);
-        this.argumentName = argumentName;
+        this.argumentName = argName;
     }
 
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      * @param message The message describing what went wrong.
      * @param cause The {@link Throwable} that triggered the new instance to be
      *        created.
      */
     public InvalidArgumentException(
-        @NotNull final String argumentName,
+        @NotNull final String argName,
         @Nullable final String message,
         @Nullable final Throwable cause
     ) {
         super(message, cause);
-        this.argumentName = argumentName;
+        this.argumentName = argName;
     }
 
     // #endregion Constructors

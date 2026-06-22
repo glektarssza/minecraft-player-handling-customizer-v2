@@ -12,7 +12,7 @@ public abstract class BaseCustomException extends Exception {
      * Create a new instance.
      */
     protected BaseCustomException() {
-        super();
+        // -- Does nothing
     }
 
     /**

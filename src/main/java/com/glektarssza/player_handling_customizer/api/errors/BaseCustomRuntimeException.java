@@ -13,7 +13,7 @@ public abstract class BaseCustomRuntimeException extends RuntimeException {
      * Create a new instance.
      */
     protected BaseCustomRuntimeException() {
-        super();
+        // -- Does nothing
     }
 
     /**

@@ -61,10 +61,10 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
     /**
      * Create a new instance.
      *
-     * @param value The value which might be held in the new instance.
+     * @param valueArg The value which might be held in the new instance.
      */
-    private Maybe(@Nullable final T value) {
-        this.value = value;
+    private Maybe(@Nullable final T valueArg) {
+        this.value = valueArg;
     }
 
     /**
@@ -173,6 +173,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * Get the result of calling the given {@link UnarySupplier} if this
      * instance has no value, an instance holding no value otherwise.
      *
+     * @param <U> The type of the value contained in the returned {@link Maybe}.
      * @param otherFunc The {@link UnarySupplier} to call to get the value to
      *        return if this instance has no value.
      *
@@ -193,14 +194,6 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      */
     @Override
     public Maybe<T> copy() {
-        return new Maybe<T>(this.value);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
         return new Maybe<T>(this.value);
     }
 

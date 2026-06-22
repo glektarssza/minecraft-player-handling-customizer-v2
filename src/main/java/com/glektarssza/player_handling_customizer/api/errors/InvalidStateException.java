@@ -13,7 +13,7 @@ public class InvalidStateException extends BaseCustomRuntimeException {
      * Create a new instance.
      */
     public InvalidStateException() {
-        super();
+        // -- Does nothing
     }
 
     /**
