@@ -30,7 +30,7 @@ public abstract class BaseCustomRuntimeException extends RuntimeException {
      * new instance to be created.
      *
      * @param cause The {@link Throwable} that triggered the new instance to be
-     *              created.
+     *        created.
      */
     protected BaseCustomRuntimeException(@Nullable final Throwable cause) {
         super(cause);
@@ -41,12 +41,13 @@ public abstract class BaseCustomRuntimeException extends RuntimeException {
      * and {@link Throwable} that caused the new instance to be created.
      *
      * @param message The message describing what went wrong.
-     * @param cause   The {@link Throwable} that triggered the new instance to be
-     *                created.
+     * @param cause The {@link Throwable} that triggered the new instance to be
+     *        created.
      */
     protected BaseCustomRuntimeException(
-            @Nullable final String message,
-            @Nullable final Throwable cause) {
+        @Nullable final String message,
+        @Nullable final Throwable cause
+    ) {
         super(message, cause);
     }
 
