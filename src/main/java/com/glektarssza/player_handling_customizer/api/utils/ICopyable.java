@@ -5,7 +5,7 @@ package com.glektarssza.player_handling_customizer.api.utils;
  *
  * @param <T> The type the interface extends.
  */
-public interface ICopyable<T> {
+public abstract interface ICopyable<T> {
     /**
      * Create a copy of this instance.
      *
