@@ -7,6 +7,11 @@
     ],
     "settings": {
         "[java]": {
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": "explicit",
+                "source.fixAll.shellcheck": "explicit",
+                "source.fixAll.prettier": "explicit"
+            },
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "redhat.java"
@@ -49,11 +54,6 @@
             "build",
             "templates/vscode"
         ],
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit",
-            "source.fixAll.shellcheck": "explicit",
-            "source.fixAll.prettier": "explicit"
-        },
         "files.associations": {
             "mcmod.info": "json",
             "pack.mcmeta": "json"
