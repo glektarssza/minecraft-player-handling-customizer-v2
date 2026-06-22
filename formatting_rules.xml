@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-model href="./formatting_rules.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <profiles version="23">
-    <profile kind="CodeFormatterProfile" name="G'lek's Formatting Rules" version="23">
+    <profile kind="CodeFormatterProfile" name="Formatting Rules" version="23">
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_ellipsis" value="insert" />
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_comma_in_enum_declarations" value="insert" />
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_allocation_expression" value="do not insert" />

@@ -211,9 +211,9 @@ A custom Checkstyle configuration for my projects.
         <module name="SuppressWithNearbyCommentFilter" />
         <module name="AvoidDoubleBraceInitialization" />
         <module name="CovariantEquals" />
-        <module name="DeclarationOrder">
+        <!-- <module name="DeclarationOrder">
             <property name="ignoreModifiers" value="true" />
-        </module>
+        </module> -->
         <module name="EqualsAvoidNull" />
         <module name="EqualsHashCode" />
         <module name="ExplicitInitialization" />
