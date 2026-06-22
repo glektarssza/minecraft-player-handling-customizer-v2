@@ -22,11 +22,11 @@ public class InvalidArgumentException extends BaseCustomRuntimeException {
     /**
      * Create a new instance.
      *
-     * @param argumentName The name of the argument which was invalid.
+     * @param argName The name of the argument which was invalid.
      */
-    public InvalidArgumentException(@NotNull final String argumentName) {
+    public InvalidArgumentException(@NotNull final String argName) {
         super();
-        this.argumentName = argumentName;
+        this.argumentName = argName;
     }
 
     /**

@@ -2,6 +2,8 @@ package com.glektarssza.player_handling_customizer.api.utils;
 
 /**
  * An interface for objects that can be copied.
+ *
+ * @param <T> The type the interface extends.
  */
 public interface ICopyable<T> {
     /**

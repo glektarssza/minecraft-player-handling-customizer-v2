@@ -8,6 +8,16 @@ import com.glektarssza.player_handling_customizer.api.annotations.NotNull;
 public final class ArrayHelpers {
     // #region Public Static Methods
 
+    /**
+     * Join an array into a string representation of itself using the specified
+     * joiner string/character.
+     *
+     * @param <T> The type of values stored in the array.
+     * @param arr The array to join.
+     * @param joiner The string/character to use to join the array.
+     *
+     * @return The joined string.
+     */
     @NotNull
     public static <T> String join(final T[] arr, @NotNull final String joiner) {
         final StringBuilder sb = new StringBuilder();
