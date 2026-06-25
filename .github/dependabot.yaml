@@ -3,34 +3,20 @@ version: 2
 updates:
   - directory: /
     package-ecosystem: gradle
+    patterns: ['*']
+    ignore:
+      - dependency-name: 'gradle-wrapper'
     labels:
       - Dependency
-    patterns: ['*']
-    groups:
-      weekly-production-dependency-security-updates:
-        applies-to: security-updates
-        dependency-type: production
-        group-by: dependency-name
-        patterns: ['*']
-        exclude-patterns: ['gradle-wrapper']
-      weekly-development-dependency-security-updates:
-        applies-to: security-updates
-        dependency-type: development
-        group-by: dependency-name
-        patterns: ['*']
-        exclude-patterns: ['gradle-wrapper']
-      weekly-production-dependency-version-updates:
-        applies-to: version-updates
-        dependency-type: production
-        group-by: dependency-name
-        patterns: ['*']
-        exclude-patterns: ['gradle-wrapper']
-      weekly-development-dependency-version-updates:
-        applies-to: version-updates
-        dependency-type: development
-        group-by: dependency-name
-        patterns: ['*']
-        exclude-patterns: ['gradle-wrapper']
+    assignees:
+      - glektarssza
+    commit-message:
+      include: scope
+      prefix: '[Dependabot] '
+    pull-request-branch-name:
+      separator: /
+    rebase-strategy: auto
+    target-branch: main
     schedule:
       interval: weekly
       day: wednesday
@@ -38,30 +24,18 @@ updates:
       timezone: Canada/Mountain
   - directory: ./.github/
     package-ecosystem: github-actions
+    patterns: ['*']
     labels:
       - Dependency
-    patterns: ['*']
-    groups:
-      weekly-production-dependency-security-updates:
-        applies-to: security-updates
-        dependency-type: production
-        group-by: dependency-name
-        patterns: ['*']
-      weekly-development-dependency-security-updates:
-        applies-to: security-updates
-        dependency-type: development
-        group-by: dependency-name
-        patterns: ['*']
-      weekly-production-dependency-version-updates:
-        applies-to: version-updates
-        dependency-type: production
-        group-by: dependency-name
-        patterns: ['*']
-      weekly-development-dependency-version-updates:
-        applies-to: version-updates
-        dependency-type: development
-        group-by: dependency-name
-        patterns: ['*']
+    assignees:
+      - glektarssza
+    commit-message:
+      include: scope
+      prefix: '[Dependabot] '
+    pull-request-branch-name:
+      separator: /
+    rebase-strategy: auto
+    target-branch: main
     schedule:
       interval: weekly
       day: wednesday
