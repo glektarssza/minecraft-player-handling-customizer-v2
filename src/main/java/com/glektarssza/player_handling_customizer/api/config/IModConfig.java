@@ -52,7 +52,7 @@ public interface IModConfig {
      */
     @NotNull
     public default Path getConfigFullPath() {
-        return this.getConfigSubDirectoryPath().andThen((path) -> {
+        return this.getConfigSubDirectoryPath().andThen(path -> {
             return Maybe
                 .ofValue(
                     TypeHelpers

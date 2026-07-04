@@ -6,6 +6,9 @@ import com.glektarssza.player_handling_customizer.api.annotations.NotNull;
 import com.glektarssza.player_handling_customizer.api.config.IModConfig;
 import com.glektarssza.player_handling_customizer.api.utils.Maybe;
 
+/**
+ * An implementation of the {@link IModConfig} interface.
+ */
 public class ModConfig implements IModConfig {
     // #region Fields
 
@@ -108,9 +111,8 @@ public class ModConfig implements IModConfig {
      *        represent.
      * @param argConfigName The name of the configuration the new instance will
      *        represent.
-     * @param argConfigSubDirectoryPath The subdirectory under the root
-     *        Minecraft configuration directory to create the configuration file
-     *        represented by the new instance.
+     * @param argRootConfigPath The path to the root of the Minecraft
+     *        configuration directory.
      */
     public ModConfig(
         @NotNull final String argModName,
@@ -127,9 +129,8 @@ public class ModConfig implements IModConfig {
      *        represent.
      * @param argConfigName The name of the configuration the new instance will
      *        represent.
-     * @param argConfigSubDirectoryPath The subdirectory under the root
-     *        Minecraft configuration directory to create the configuration file
-     *        represented by the new instance.
+     * @param argRootConfigPath The path to the root of the Minecraft
+     *        configuration directory.
      * @param argConfigSubDirectoryPath The subdirectory under the root
      *        Minecraft configuration directory to create the configuration file
      *        represented by the new instance.
@@ -155,9 +156,8 @@ public class ModConfig implements IModConfig {
      *        represent.
      * @param argConfigName The name of the configuration the new instance will
      *        represent.
-     * @param argConfigSubDirectoryPath The subdirectory under the root
-     *        Minecraft configuration directory to create the configuration file
-     *        represented by the new instance.
+     * @param argRootConfigPath The path to the root of the Minecraft
+     *        configuration directory.
      * @param argMaybeConfigSubDirectoryPath The subdirectory under the root
      *        Minecraft configuration directory to create the configuration file
      *        represented by the new instance.
@@ -165,12 +165,12 @@ public class ModConfig implements IModConfig {
     protected ModConfig(
         @NotNull final String argModName,
         @NotNull final String argConfigName,
-        @NotNull final Path argRootConfigDirectoryPath,
+        @NotNull final Path argRootConfigPath,
         @NotNull final Maybe<Path> argMaybeConfigSubDirectoryPath
     ) {
         this.modName = argModName;
         this.configName = argConfigName;
-        this.rootConfigDirectoryPath = argRootConfigDirectoryPath;
+        this.rootConfigDirectoryPath = argRootConfigPath;
         this.configSubDirectoryPath = argMaybeConfigSubDirectoryPath;
     }
 
