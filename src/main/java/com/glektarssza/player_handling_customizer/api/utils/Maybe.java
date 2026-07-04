@@ -125,11 +125,12 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The given {@link Maybe} value if this instance has a value, a
      *         copy of this instance otherwise.
      */
+    @NotNull
     public Maybe<T> andThen(@NotNull final Maybe<T> other) {
         if (this.value != null) {
             return other;
         }
-        return this.copy();
+        return Maybe.ofNullable(this.value);
     }
 
     /**
@@ -142,13 +143,14 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The result of calling the given {@link UnarySupplier} if this
      *         instance has a value, a copy of this instance otherwise.
      */
+    @NotNull
     public Maybe<T> andThen(
-        @NotNull final UnarySupplier<T, Maybe<T>> otherFunc
+        @NotNull final UnarySupplier<T, @NotNull Maybe<T>> otherFunc
     ) {
         if (this.value != null) {
             return otherFunc.call(this.value);
         }
-        return this.copy();
+        return Maybe.ofNullable(this.value);
     }
 
     /**
@@ -162,6 +164,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The given {@link Maybe} value if this instance holds no value, an
      *         instance has no value otherwise.
      */
+    @NotNull
     public <U> Maybe<U> orElse(@NotNull final Maybe<U> other) {
         if (this.value == null) {
             return other;
@@ -180,8 +183,9 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
      * @return The result of calling the given {@link UnarySupplier} if this
      *         instance has no value, an instance holding no value otherwise.
      */
+    @NotNull
     public <U> Maybe<U> orElse(
-        @NotNull final VoidSupplier<Maybe<U>> otherFunc
+        @NotNull final VoidSupplier<@NotNull Maybe<U>> otherFunc
     ) {
         if (this.value == null) {
             return otherFunc.call();
@@ -192,6 +196,7 @@ public final class Maybe<T> implements ICopyable<Maybe<T>> {
     /**
      * {@inheritDoc}
      */
+    @NotNull
     @Override
     public Maybe<T> copy() {
         return new Maybe<T>(this.value);
