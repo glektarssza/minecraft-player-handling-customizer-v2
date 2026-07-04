@@ -35,3 +35,13 @@ tasks.withType(Checkstyle).configureEach {
         languageVersion = JavaLanguageVersion.of(25)
     }
 }
+
+tasks.register('checkstyle') {
+    group = 'check'
+    description = 'Run Checkstyle checks.'
+    dependsOn([
+        tasks.checkstyleMain,
+        tasks.checkstyleApi,
+        tasks.checkstyleTest
+    ])
+}
