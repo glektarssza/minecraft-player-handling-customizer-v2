@@ -11,8 +11,6 @@
         "vscjava.vscode-java-debug",
         "vscjava.vscode-java-test",
         "shengchen.vscode-checkstyle",
-        "SPGoding.datapack-language-server",
-        "actuallyboomber.tellraw-preview",
         "Misodee.vscode-nbt"
     ],
     "unwantedRecommendations": ["vscjava.vscode-java-pack"]
