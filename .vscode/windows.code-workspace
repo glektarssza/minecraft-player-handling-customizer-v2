@@ -12,11 +12,13 @@
                 "source.fixAll.shellcheck": "explicit",
                 "source.fixAll.prettier": "explicit"
             },
+            "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "redhat.java"
         },
         "[github-actions-workflow]": {
+            "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -24,27 +26,41 @@
             "editor.tabSize": 2
         },
         "[json]": {
+            "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[jsonc]": {
+            "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[jsonl]": {
+            "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[yaml]": {
+            "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "file",
             "editor.defaultFormatter": "esbenp.prettier-vscode",
             "editor.indentSize": "tabSize",
             "editor.tabSize": 2
         },
+        "bashIde.globPattern": "**/*@(.sh|.inc|.bash|.command|.zsh)",
+        "bashIde.includeAllWorkspaceSymbols": true,
+        "bashIde.shellcheckPath": "<$env:HOME>/scoop/apps/shellcheck/current/shellcheck.exe",
+        "bashIde.shfmt.binaryNextLine": true,
+        "bashIde.shfmt.caseIndent": true,
+        "bashIde.shfmt.funcNextLine": false,
+        "bashIde.shfmt.languageDialect": "auto",
+        "bashIde.shfmt.path": "<$env:HOME>/scoop/apps/shfmt/current/shfmt.exe",
+        "bashIde.shfmt.simplifyCode": true,
+        "bashIde.shfmt.spaceRedirects": true,
         "cSpell.ignorePaths": [
             "vscode-extension",
             ".git/{info,lfs,logs,refs,objects}/**",
@@ -98,7 +114,6 @@
         "java.completion.chain.enabled": true,
         "java.completion.collapseCompletionItems": true,
         "java.completion.enabled": true,
-        "java.completion.engine": "ecj",
         "java.completion.guessMethodArguments": "off",
         "java.completion.importOrder": [
             "#",
@@ -163,7 +178,7 @@
         "java.import.generatesMetadataFilesAtProjectRoot": false,
         "java.import.gradle.annotationProcessing.enabled": true,
         "java.import.gradle.enabled": true,
-        "java.import.gradle.java.home": "${env:HOME}/scoop/apps/temurin25-jdk/current/",
+        "java.import.gradle.java.home": "<$env:HOME>/scoop/apps/temurin25-jdk/current/",
         "java.import.gradle.offline.enabled": false,
         "java.import.gradle.version": "8.13",
         "java.import.gradle.wrapper.enabled": true,
@@ -172,8 +187,7 @@
         "java.inlayHints.parameterNames.enabled": "none",
         "java.jdt.ls.androidSupport.enabled": "off",
         "java.jdt.ls.appcds.enabled": "off",
-        "java.jdt.ls.java.home": "${env:HOME}/scoop/apps/temurin25-jdk/current/",
-        "java.jdt.ls.javac.enabled": "off",
+        "java.jdt.ls.java.home": "<$env:HOME>/scoop/apps/temurin25-jdk/current/",
         "java.jdt.ls.lombokSupport.enabled": true,
         "java.jdt.ls.protobufSupport.enabled": true,
         "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms512m -Xlog:disable",
