@@ -9,7 +9,7 @@ dependencies {
         // -- Common
         annotationProcessor('org.ow2.asm:asm-debug-all:5.2')
         annotationProcessor('com.google.guava:guava:33.7.2-jre')
-        annotationProcessor('com.google.code.gson:gson:2.14.0')
+        annotationProcessor('com.google.code.gson:gson:2.15.0')
 
         // -- Mixins
         implementation(modUtils.enableMixins(mixinProviderSpec, refMapName))
